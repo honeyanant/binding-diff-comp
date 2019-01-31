@@ -3,16 +3,20 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { TestcompAComponent } from './testcomp-a/testcomp-a.component';
+import { TestcompBComponent } from './testcomp-b/testcomp-b.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TestcompAComponent,
+    TestcompBComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent,TestcompAComponent]
 })
 export class AppModule { }
