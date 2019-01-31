@@ -17,6 +17,6 @@ import { TestcompBComponent } from './testcomp-b/testcomp-b.component';
     AppRoutingModule
   ],
   providers: [],
-  bootstrap: [AppComponent,TestcompAComponent]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }

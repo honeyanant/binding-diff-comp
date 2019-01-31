@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-testcomp-a',
@@ -7,9 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TestcompAComponent {
 
-  compAInput: string;
+  @Input() compAInput: string;
+  @Output() compAInputChange = new EventEmitter<string>();
   showCompAInput($event) {
     this.compAInput = $event.target.value;
+    this.compAInputChange.emit(this.compAInput);
   }
 
 
